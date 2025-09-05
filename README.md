@@ -114,6 +114,13 @@ Now open 👉 http://127.0.0.1:8000/
 <img width="1902" height="837" alt="image" src="https://github.com/user-attachments/assets/06b27f18-a67a-424f-b094-c65f911786b2" />
 <img width="853" height="645" alt="image" src="https://github.com/user-attachments/assets/0bf01fd8-8fb7-49d5-afda-584bda9ef542" />
 <img width="1782" height="920" alt="image" src="https://github.com/user-attachments/assets/32ae0364-a907-48da-b0cf-f5ac0dee47d1" />
+<img width="1803" height="867" alt="image" src="https://github.com/user-attachments/assets/3b6e6de0-7bfb-4e93-9436-dc8bf8a63ef4" />
+<img width="1222" height="686" alt="image" src="https://github.com/user-attachments/assets/75e0968d-8288-4a1f-83fd-587811f75a3b" />
+<img width="1754" height="567" alt="image" src="https://github.com/user-attachments/assets/81fdffa5-5f3d-4b8e-8144-7aa691b2ed3b" />
+<img width="1273" height="654" alt="image" src="https://github.com/user-attachments/assets/9cb2d87c-a5c8-47e1-befa-be3bea630235" />
+
+
+
 
 
 
