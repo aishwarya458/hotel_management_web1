@@ -109,3 +109,8 @@ python manage.py runserver
 
 
 Now open 👉 http://127.0.0.1:8000/
+
+
+<img width="1902" height="837" alt="image" src="https://github.com/user-attachments/assets/06b27f18-a67a-424f-b094-c65f911786b2" />
+
+
