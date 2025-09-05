@@ -1,34 +1,6 @@
-# Python
+myenv/
 __pycache__/
-*.py[cod]
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-
-# Virtual Environment
-venv/
-env/
-ENV/
-
-# Django Stuff
-*.log
-*.pot
 *.pyc
 db.sqlite3
-media/
-
-# VSCode / PyCharm / IDE
-.vscode/
-.idea/
-
-# OS Files
-.DS_Store
-Thumbs.db
-
-# Environment variables
 .env
-
-# Static files (collected with collectstatic)
-staticfiles/
+venv/
