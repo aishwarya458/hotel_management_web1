@@ -112,5 +112,9 @@ Now open 👉 http://127.0.0.1:8000/
 
 
 <img width="1902" height="837" alt="image" src="https://github.com/user-attachments/assets/06b27f18-a67a-424f-b094-c65f911786b2" />
+<img width="853" height="645" alt="image" src="https://github.com/user-attachments/assets/0bf01fd8-8fb7-49d5-afda-584bda9ef542" />
+<img width="1782" height="920" alt="image" src="https://github.com/user-attachments/assets/32ae0364-a907-48da-b0cf-f5ac0dee47d1" />
+
+
 
 
