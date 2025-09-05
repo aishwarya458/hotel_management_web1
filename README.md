@@ -15,6 +15,8 @@ Responsive UI with Bootstrap
 
 Email and OTP based authentication
 
+
+
 🏪 Vendor Features
 
 Vendor Registration and Login
@@ -26,6 +28,9 @@ Upload hotel details with amenities
 Manage hotel listings
 
 Email and OTP based authentication
+
+
+
 
 ⚙️ Tech Stack
 
@@ -42,7 +47,9 @@ Other: AJAX for dynamic loading
 git clone https://github.com/your-username/oyo_clone.git
 cd oyo_clone
 
-2. Create a virtual environment
+
+
+3. Create a virtual environment
 python -m venv venv
 
 
@@ -57,8 +64,12 @@ Mac/Linux:
 
 source venv/bin/activate
 
+
+
 3. Install dependencies
 pip install -r requirements.txt
+
+
 
 4. Configure Database
 
@@ -74,6 +85,8 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+
 5.Configure Messages
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -87,10 +100,11 @@ EMAIL_HOST_PASSWORD = 'email_password'
 python manage.py makemigrations
 python manage.py migrate
 
-7. Create Superuser
+
+8. Create Superuser
 python manage.py createsuperuser
 
-8. Run Server
+9. Run Server
 python manage.py runserver
 
 
