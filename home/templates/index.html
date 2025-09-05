@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block start %}
+{% include 'alerts.html' %}
+
+
+<div class="container mt-5 ">
+    <div class="container mt-5 pt-5 pb-5">
+    <div class="col-6 mx-auto">
+        <form class="d-flex">
+        <input type="text" name="search" class="form-control" placeholder="Search">
+        <select class="form-control" name="sort_by">
+            <option value="">Choose</option>
+            <option  value="sort_low">Sort by Low to high</option>
+            <option  value="sort_high">Sort by high to Low</option>
+
+
+        </select>
+        <button type="submit" class="btn btn-warning mt-1">Search</button>
+        </form>
+    </div>
+    <h2 class="mb-4">Available Hotels</h2>
+    
+           
+   
+    <div class="row g-4"> 
+        {% for hotel in hotels %}
+        
+            <div class="hotel-card col-3 me-4  shadow " style="width: 18rem;">
+                <a href="{% url 'hotel_details' hotel.hotel_slug %}" style="text-decoration: none; color: inherit">
+                {% if hotel.hotel_images.first %}
+                    <img src="{{ hotel.hotel_images.first.image.url }}" class="card-img-top" alt="Hotel image">
+                {% else %}
+    
+                    <img src="https://as1.ftcdn.net/v2/jpg/04/62/93/66/1000_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg" class="card-img-top" alt="Default Hotel Image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{hotel.hotel_name }}</h5>
+                    
+                    <hr>
+                    <p>Price:<span class="card-text" style="text-decoration: line-through">{{ hotel.hotel_price }}</span></p>
+                    <p class="card-text" >Offer Price: <b>{{ hotel.hotel_offer_price }}</b></p>
+                    
+                    {% for amenetie in hotel.amenities.all %}
+                        <span class="badge text-bg-primary">{{amenetie.amenite_name}}</span>
+                    {% endfor %}
+                </div>
+
+            </a>
+            </div>
+            
+        {% endfor %}
+    
+    </div>
+     
+   
+</div>
+
+
+{% endblock %}
+        

@@ -1,0 +1,57 @@
+{% extends 'vendor_base.html' %}
+
+{% block start %}
+ {% include 'alerts.html' %}
+<div class="container pt-5">
+    <div class="card w-50 mx-auto shadow p-4">
+        
+        <form method="POST">
+            
+            {% csrf_token %}
+            
+           
+            
+            <div class="mb-3">
+                <label for="text" class="form-label">Hotel Name</label>
+                <input type="text" name="hotel_name" class="form-control" id="hotel_name" placeholder="Enter Hotel name.">
+            </div>
+
+            <div class="mb-3">
+            <label for="hotel_description" class="form-label">Hotel description</label>
+            <textarea class="form-control" name="hotel_description" id="hotel_description" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="hotel_price" class="form-label">Hotel Price</label>
+                <input type="text" name="hotel_price" class="form-control" id="hotel_price" placeholder="Enter Price">
+            </div>
+
+             
+            <div class="mb-3">
+                <label for="hotel_offer_price" class="form-label" > Offer Price</label>
+                <input type="text" name="hotel_offer_price" class="form-control" id="hotel_offer_price" placeholder="Enter offer Price">
+            </div>
+             <div class="mb-3">
+                <label for="hotel_location" class="form-label" >hotel_location</label>
+                <input type="text" name="hotel_location" class="form-control" id="hotel_location" placeholder="Enter Hotel Location">
+            </div>
+
+            <div class="mb-3">
+            <label for="amenities" class="form-label" >Select Amenity</label>
+            <select class="form-select" name="amenities[]" id="amenities" aria-label="Select Amenity" multiple>
+                {% for amenitie in amenities %}
+                    <option value="{{ amenitie.id }}">{{ amenitie.amenite_name }}</option>
+                {% endfor %}
+            </select>
+            </div>
+
+            <button type="submit" class="btn btn-success w-70 ">Submit</button>
+         
+            
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

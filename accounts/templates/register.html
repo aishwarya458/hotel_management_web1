@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<div class="container pt-5">
+    <div class="card w-50 mx-auto shadow p-4">
+        <form method="POST">
+            {% csrf_token %}
+            {% include 'alerts.html' %}
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Enter Your First Name">
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" name="last_name"  class="form-control" id="last_name" placeholder="Enter Your Last Name">
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="Email" placeholder="Enter Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="phn_no" class="form-label">Phone Number</label>
+                <input type="text" name="phn_no" class="form-control" id="phn_no" placeholder="Enter Phone Number">
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Enter Password</label>
+                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter">
+            </div>
+            <button type="submit" class="btn btn-success w-70 ">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

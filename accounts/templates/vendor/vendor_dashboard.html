@@ -1,0 +1,50 @@
+
+{% extends 'vendor_base.html' %}
+{% load static %}
+{% block title %}Vendor Dashboard{% endblock %}
+
+{% block start %}
+{% include 'alerts.html' %}
+<div class="container mt-5 ">
+    <div class="mx-auto col-6 text-center">
+        <a href="{% url 'add_hotel'%}" class="btn btn-success"> Add Hotels</a>
+    </div>
+    
+    <div class="row g-4"> 
+        {% for hotel in hotels %}
+        
+            <div class="card col-3 me-4  shadow " style="width: 18rem;">
+        
+                {% if hotel.hotel_images.first %}
+                    <img src="{{ hotel.hotel_images.first.image.url }}" class="card-img-top" alt="Hotel image">
+                {% else %}
+    
+                    <img src="https://as1.ftcdn.net/v2/jpg/04/62/93/66/1000_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg" class="card-img-top" alt="Default Hotel Image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{hotel.hotel_name }}</h5>
+                    
+                    <hr>
+                    <p>Price:<span class="card-text" style="text-decoration: line-through">{{ hotel.hotel_price }}</span></p>
+                    <p class="card-text" >Offer Price: <b>{{ hotel.hotel_offer_price }}</b></p>
+                    
+                    {% for amenetie in hotel.amenities.all %}
+                        <span class="badge text-bg-primary">{{amenetie.amenite_name}}</span>
+                    {% endfor %}
+                </div>
+                
+                <a href="{% url 'upload_images' hotel.hotel_slug %}" class="btn btn-success">Upload Image</a>
+            
+
+                <a href="{% url 'edit_hotel' hotel.hotel_slug %}" class="btn btn-warning">Edit</a>
+            </div>
+            
+        {% endfor %}
+    
+    </div>
+     
+   
+</div>
+
+
+{% endblock %}

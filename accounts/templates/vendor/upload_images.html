@@ -1,0 +1,35 @@
+{% extends 'vendor_base.html' %}
+
+{% block start %}
+{% include 'alerts.html' %}
+<div class="container pt-5">
+    <div class="col-12">
+            {% for image in images %}
+                <img src="{{image.image.url}}" alt="Hotel_Image" style="height:150px;width:150px;">
+                
+                <a class="btn btn-warning" href="{% url 'delete_images' image.id %}">Delete</a>
+                
+            {% endfor %}
+            
+        </div>
+    <div class="card w-50 mx-auto shadow p-4">
+
+
+        
+        
+        <form method="POST" enctype="multipart/form-data">
+            
+            {% csrf_token %}
+         
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="image" class="form-control" id="image" required>
+            </div>
+
+            <button type="submit" class="btn btn-success w-70 ">Upload</button>
+         
+        </form>
+    </div>
+
+{% endblock %}

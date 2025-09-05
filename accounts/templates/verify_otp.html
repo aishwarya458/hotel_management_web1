@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+<div class="container pt-5">
+    <div class="card w-50 mx-auto shadow p-4">
+           
+        <form method="POST">
+            
+            {% csrf_token %}
+            
+            {% include 'alerts.html' %}
+            
+         
+            <div class="mb-3">
+                <label for="otp" class="form-label">Verify OTP</label>
+                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP">
+            </div>
+            <button type="submit" class="btn btn-success w-70 ">Verify</button>
+           
+        </form>
+    </div>
+</div>
+
+{% endblock %}
